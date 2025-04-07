@@ -1,0 +1,197 @@
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+em,
+img,
+ins, 
+strong, 
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,  
+tbody,
+tfoot,
+thead,
+tr,
+th,
+main,
+td,
+article,
+aside, 
+figure,
+figcaption,
+footer,
+header,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+iframe {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font: 16px Arial, Helvetica, sans-serif;
+	color: #333;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+/* Padding do body */
+#container {
+    padding: 40px 50px 0 ;
+}
+/* Perssonalizando o header */
+/* image replacemente */
+header {
+    background-color: #ffffff;
+    position: relative;
+}
+h1 span {
+    display: block;
+    text-indent: -9999999px;
+}
+#hederInitial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navoptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+}
+#navoptions li {
+ border: solid 1px transparent;
+ margin: 0 40px 20px;
+}
+#navoptions a {
+    font: 20px Poppins;
+   text-decoration: none;
+   color: #000000;
+}
+#navoptions a:hover {
+    color: #E6C744;
+}
+a#loginButton {
+    padding: 5px 10px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+a#loginButton:hover {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+     transform: translateY(-5px);
+    transition-duration: 0.5s;
+    background-color: #E6C744;
+    color: #ffffff;
+}
+a#loginButton:active {
+    transform: scale(0.95);
+}
+#contentHeader {
+    display: flex;
+    width: 1000px;
+    justify-content: space-evenly;
+    align-items:center;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #f3f2f2;
+    padding: 30px;
+}
+/* scalonei a imagem via css lembrar de mudar o tamanho via photoshop */
+#img1 {
+    width: 500px;
+}
+/* retangolo amarelo */
+#img2 {
+    width: 300px;
+    position: fixed;
+    top: 36.5%;
+    left: 13%;
+    z-index: 0;
+}
+#textHeader h2 {
+    font: 900 60px/120% Poppins;
+    color: #000000;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+#textHeader p {
+    margin: 20px 0;
+    font: 400 27px Poppins;
+}
+#textHeader a {
+    padding: 10px 25px;
+    background-color: #000000;
+    font: 400 25px Poppins;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
+}
+#textHeader a:hover {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+     transform: translateY(-5px);
+    transition-duration: 0.5s;
+    background-color: #E6C744;
+    color: #ffffff;
+}
+#textHeader a:active {
+    transform: scale(0.95);
+}
+/* aqui começa o banner */
+#markerLogos{ 
+    padding: 20px 20px;
+    background-color: #E6C744;
+    border: 1px solid transparent;
+    margin-top: 30px;
+}
+img[src="assets/bannerLogos.svg"] {
+    width: 1200px;
+}
