@@ -256,9 +256,9 @@ main {
 /* estou fazendo uma image replacemente para garantir acessibilidade e fidelidade ao design */
 #arrivals {
 	background-color: #fff;
-	border-radius: 20px;
+	border-radius: 20px 20px 0 0;
 	width: 90vw;
-	height: 100vh;
+	height: auto;
 	padding-bottom: 5%;
 }
 /* image replacemente */
@@ -328,11 +328,7 @@ main {
 .cardArrivals:hover {
 	transform: translateY(-5px) scale(1.1);
 }
-/* #arrivals {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-} */
+
 #arrivalsContent {
 	display: flex;
 	justify-content: space-evenly;
@@ -341,3 +337,68 @@ main {
 	height: auto;
 	margin-top: 5%;
 }
+/* PayDay section */
+#payDay {
+	width: 90vw;
+	height: 90vh;
+	background-image: url(../assets/payDaySection.svg);
+	background-size: cover;
+	display: flex;
+	justify-content: flex-end;
+}
+#PaydaySection {
+	width: 46%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 20px;
+}
+#imagePayDaySection img {
+	width: 100%;
+	height: 100%;
+}
+ #imagePayDaySection {
+	width: 70%;
+	height: 40%;
+	/* margin-left: 15%; */
+ }
+ .textcontentPayday {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-left: 5%;
+ }
+ .textcontentPayday p {
+	font-size: 1.3rem;
+	line-height: 1.5;
+	font-weight: 500;
+	color: #000;
+ } 
+.textcontentPayday p span{
+	display: block;
+	font-weight: bold;
+
+ }
+
+ /* botão */
+ #botaoDoPayDaySection {
+	width: 30%;
+	background-color: #000;
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	transition: all 0.5s ease;
+ }
+ #botaoDoPayDaySection a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	font-family: "Poppins";
+	font-size: 1.1rem;
+ }
+ #botaoDoPayDaySection:hover {
+	transform: translateY(-5px) scale(1.1);
+	transition-duration: 0.4s; 
+ }
