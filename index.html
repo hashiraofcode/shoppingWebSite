@@ -1,27 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="assets/favicon.svg">
-        <meta name="roboots" content="index, follow">
-        <meta name="description" content="">
-        <!-- Link da/s fonte/s -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet">
-        <title>Fashion | Seu Shopping Online!!!</title>
-    </head>
-    <body>
-        <header>
-            <h1>
-                <img src="/assets/logoFashion.svg" alt="">
-                
-            </h1>
-        </header>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.svg">
+    <meta name="roboots" content="index, follow">
+    <meta name="description" content="">
+    <!-- Link da/s fonte/s -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Fashion | Seu Shopping Online!!!</title>
+</head>
+
+<body>
+    <header>
+        <section class="interface">
+            <a href="#" aria-label="back to home" id="home" tabindex="2">
+                <h1>
+                    <img src="/assets/logoFashion.svg" alt="">
+                    <!-- image Replacemant -->
+                    <span tabindex="1">Shopping Fashion</span>
+                </h1>
+            </a>
+            <section class="options">
+                <nav>
+                    <ul>
+                        <li><a href="#">catalogue</a></li>
+                        <li><a href="#">fashion</a></li>
+                        <li><a href="#">favorite</a></li>
+                        <li><a href="#">lifestyle</a></li>
+                    </ul>
+                </nav>
+                <button id="botaoLogin" tabindex="3"><a href="#">sign up</a></button>
+            </section>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <div id="contentImage"><img src="assets/contentImage.svg" alt="Fashion seu closet online"></div>
+            <p class="marginItens">Live for Influential and Innovative fashion!</p>
+            <button class="marginItens" id="botaoDoHero"><a href="#" id="aDoHero" tabindex="4">Shop Now</a></button>
+        </section>
+        <div id="faixaDeMarcas" aria-hidden="true"><img src="assets/bannerLogos.svg" alt=""></div>
+
+
+
+
+
+
+        <section id="arrivals">
+            <h2>
+                <img src="assets/tituloArrivals.svg" alt="">
+                <!-- image replacemente -->
+                <span>new arrivals</span>
+            </h2>
+            <div id="arrivalsContent">
+                <a href="#">
+                    <div class="cardArrivals"id="leftCard">
+                        <div class="containerFoto">
+                            <img src="assets/tshirt.png" alt="">
+                        </div>
+                        <h3>Hoodies & Sweetshirt</h3>
+                        <p>Explore Now!</p>
+                        <img src="assets/setaDeConteúdo.svg" alt="" class="icon">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="cardArrivals"id="leftCard">
+                        <div class="containerFoto">
+                            <img src="assets/coats.png" alt="">
+                        </div>
+                        <h3>Coats & Parkas</h3>
+                        <p>Explore Now!</p>
+                        <img src="assets/setaDeConteúdo.svg" alt="" class="icon">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="cardArrivals"id="leftCard">
+                        <div class="containerFoto">
+                            <img src="assets/tees.png" alt="">
+                        </div>
+                        <h3>Tees & T-Shirt</h3>
+                        <p>Explore Now!</p>
+                        <img src="assets/setaDeConteúdo.svg" alt="" class="icon">
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
 </html>
