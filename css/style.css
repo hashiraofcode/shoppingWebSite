@@ -289,6 +289,7 @@ main {
 	justify-items: start;
 	gap: 10px 0;
 	transition: all 0.4s ease;
+	border: 1px solid transparent;
 }
 .cardArrivals h3 {
 	margin-top: 10px;
@@ -301,9 +302,12 @@ main {
 .cardArrivals .containerFoto img{
 	width: 100%;
 	height: 100%;
+	border-radius: 20%;
 }
 .containerFoto {
-	height: 100%;
+	width: 300px;
+	height: 400px;
+	justify-self: center;
 	grid-area: imagem;
 }
 .icon {
@@ -336,6 +340,7 @@ main {
 	flex-wrap: wrap;
 	height: auto;
 	margin-top: 5%;
+	gap: 30px;
 }
 /* PayDay section */
 #payDay {
@@ -381,7 +386,6 @@ main {
 	font-weight: bold;
 
  }
-
  /* botão */
  #botaoDoPayDaySection {
 	width: 30%;
