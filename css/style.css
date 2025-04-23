@@ -426,6 +426,7 @@ main {
 	align-items: center;
 	margin-top: 2%;
 	margin-left: 2%;
+	margin-bottom: 2%;
  }
  #youngContent h2 span {
 	display: block;
@@ -499,4 +500,103 @@ main {
 /* animação do card */
 #youngContent #youngContentCards a#alinhadoADireita:hover, #youngContent #youngContentCards a#alinhadoAEsquerda:hover {
 	transform: translateY(-5px) scale(1.1);
+}
+/* comercial app */
+#CormecialApp {
+	width: 90vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+}
+#ComercialImage img {
+	width: 100%;
+	height: 100%;
+}
+#ComercialImage {
+	width: 50%;
+	height: 90%;
+}
+#ComercialContent {
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* padding-top: 10%; */
+	gap: 40px;
+}
+#ComercialContent h3 {
+	font-weight: bold;
+	font-size: 2rem;
+	line-height: 1.5;
+	color: #000;
+
+}
+#ComercialContent p {
+	font-weight: 300;
+	color:#000;
+	line-height: 1.4;
+}
+#ComercialContent img {
+	width: 40%;
+	padding-right: 10%;
+}
+/* news latter */
+#news {
+	width: 90vw;
+	height: 60vh;
+	background-color: #E6C744;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+#news h4{
+	font-size: 3rem;
+	font-weight: bold;
+	line-height: 1.5;
+	color: #fff;
+	text-align: center;
+}
+#news p{
+	font-size: 1rem;
+	font-weight: 300;
+	color: #fff;
+}
+#news .inputbutton {
+	position: relative;
+	width: 400px;
+}
+#news .inputbutton input {
+	width: 100%;
+	height: 50px;
+	padding: 0 90px 0 20px; /* padding direito maior pro botão caber */
+	border-radius: 15px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+#news .inputbutton button {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 36px;
+	padding: 0 15px;
+	border: none;
+	border-radius: 10px;
+	background-color: #000;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+}
+#news .inputbutton button:hover {
+	background-color: #E6C744;
+	color: #000;
 }
