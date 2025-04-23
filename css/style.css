@@ -164,6 +164,7 @@ nav > ul li a:hover {
 #botaoLogin:hover{
 	transform: translateY(-5px) scale(1.1);
 	transition-duration: 0.4s;
+	background-color: #ffd104;
 }
 #botaoLogin a, #aDoHero {
 	text-decoration: none;
@@ -177,10 +178,14 @@ nav > ul li a:hover {
 #botaoDoHero:hover{
 	transform: translateY(-5px) scale(1.1);
 	transition-duration: 0.4s; 
+	background-color: #ffd104;
 }
 /* mudando o tamanho do botão */
 #botaoDoHero {
 	width: 10%;
+}
+#botaoLogin a:hover, #botaoDoHero a:hover {
+	color: #000;
 }
 
 @media (max-width: 1250px) {
@@ -239,7 +244,7 @@ main {
 }
 /* banner */
 #faixaDeMarcas {
-	height: 10vh;
+	height: 15vh;
 	width: 90%;
 	background-color: #E6C744;
 	margin-top: 20px;
@@ -304,6 +309,9 @@ main {
 	height: 100%;
 	border-radius: 20%;
 }
+.cardArrivals img.icon {
+	width: 40%;
+}
 .containerFoto {
 	width: 300px;
 	height: 400px;
@@ -340,7 +348,7 @@ main {
 	flex-wrap: wrap;
 	height: auto;
 	margin-top: 5%;
-	gap: 30px;
+	gap: 40px;
 	padding:  0 4%
 }
 /* PayDay section */
@@ -403,9 +411,13 @@ main {
 	font-family: "Poppins";
 	font-size: 1.1rem;
  }
+ #botaoDoPayDaySection a:hover {
+	color: #000;
+ }
  #botaoDoPayDaySection:hover {
 	transform: translateY(-5px) scale(1.1);
 	transition-duration: 0.4s; 
+	background-color: #ffd104;
  }
  
  /* yongs's favorite */
@@ -554,6 +566,8 @@ main {
 	justify-content: center;
 	align-items: center;
 	gap: 40px;
+	border-radius: 0 0 20px 20px;
+	margin-bottom: 2%;
 }
 #news h4{
 	font-size: 3rem;
@@ -599,4 +613,90 @@ main {
 #news .inputbutton button:hover {
 	background-color: #E6C744;
 	color: #000;
+}
+
+footer {
+	width: 100%;
+	background-color: #000;
+	height: 500px;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: auto;
+	align-items: center;
+}
+
+.socialContent{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+}
+.socialContent h6 {
+	font-size: 2rem;
+	width: 67%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+
+}
+.socialContent p {
+	font-weight: 200;
+	color: #333;
+	line-height: 1.5;
+	font-size: 0.9rem;
+	padding-right: 10%;
+	margin-bottom: 5%;
+}
+.socialContent .icon a img {
+	width: 100%;
+	height: 100%;
+}
+.icon {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 20px;
+	padding-left: 30%;
+}
+.socialContent  a {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+
+ul.lista {
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+	align-items: flex-start;
+	gap: 20px;
+	height: 40%;
+}
+
+li.titulo{
+	font-size: 1rem;
+	font-weight: 300;
+	color: #fff;
+	text-transform: capitalize;
+}
+li.item a{
+	font-size: 1rem;
+	color: #b9b5b5;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.4s ease;
+}
+li.item a:hover {
+	color: #E6C744;
+	transition-duration: 0.5s;
 }
