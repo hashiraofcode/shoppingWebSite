@@ -11,9 +11,9 @@
     <!-- Link da/s fonte/s -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+        <script src="js/index.js" defer></script>
     <title>Fashion | Seu Shopping Online!!!</title>
 </head>
 
@@ -28,15 +28,17 @@
                 </h1>
             </a>
             <section class="options">
-                <nav>
-                    <ul>
+                <button id="menu-btn">menu<span id="hamburguer"></span><span></span></button>
+                <nav id="nav" aria-expanded="false">
+                    <button id="btn-fechar"><span id="x"></span></button>
+                    <ul class="menu-responsivo">
                         <li><a href="#">catalogue</a></li>
                         <li><a href="#">fashion</a></li>
                         <li><a href="#">favorite</a></li>
                         <li><a href="#">lifestyle</a></li>
+                        <button id="botaoLogin" tabindex="3"><a href="#">sign up</a></button>
                     </ul>
                 </nav>
-                <button id="botaoLogin" tabindex="3"><a href="#">sign up</a></button>
             </section>
             </div>
         </section>

@@ -62,7 +62,7 @@ body {
 	font: 1rem  'Poppins';
 	color: #333;
 	line-height: 100%;
-	box-sizing: border-box;
+	overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -74,7 +74,9 @@ table {
 	width: 100%;
 }
 htnml {
-	font-size: 62,5%;
+	font-size: 62.5%;
+	box-sizing: border-box;
+	overflow:  hidden;
 }
 /* image replacemente */
 header .interface a h1 span {
@@ -85,7 +87,7 @@ width: 100%;
 
 /* começando o header */
 .interface {
-	width: 95vw;
+	width: 80%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -105,6 +107,7 @@ h1 {
 	align-items: center;
 }
 header {
+	max-width: 100dvw;;
 	height: 15vh;
 	display: flex;
 	align-items: center;
@@ -154,9 +157,11 @@ nav > ul li a:hover {
 /* botão */
 /* optei por colocar os botões do hero e do login dividindo a mesma regra, pois ambos tem uma formatação muito similar */
 #botaoLogin, #botaoDoHero {
-	width: 15%;
+	width: 10vw;
+	max-width: 11vw;
+	min-width: 120px;
+	padding: 1rem;
 	background-color: #000;
-	padding: 10px;
 	border-radius: 8px;
 	border: 1px solid transparent;
 	transition: all 0.5s ease;
@@ -169,9 +174,9 @@ nav > ul li a:hover {
 #botaoLogin a, #aDoHero {
 	text-decoration: none;
 	color: #fff;
-	padding: 5px 5px;
 	font-weight: 500;
-	font-family: "Poppins";
+	font-size: clamp(12px,1vw,1.5vw);
+	font-family: Poppins;
 	text-transform: uppercase;
 }
 /* formatação da animação do botão */
@@ -180,32 +185,13 @@ nav > ul li a:hover {
 	transition-duration: 0.4s; 
 	background-color: #ffd104;
 }
-/* mudando o tamanho do botão */
-#botaoDoHero {
-	width: 10%;
-}
+
+
 #botaoLogin a:hover, #botaoDoHero a:hover {
 	color: #000;
 }
-
-@media (max-width: 1250px) {
-	#botaoLogin {
-		width: 15%;
-		background-color: #000;
-		padding: 5px;
-		border-radius: 10px;
-		border: 1px solid transparent;
-}
-
-nav {
-	width: auto;
-	height: 100%;
-	justify-self: flex-end;
-}
-nav > ul li a {
-	padding: 5px;
-	font-size: calc(1rem - 20%);
-}
+#botaoLogin {
+	margin-left: clamp(.4rem,1rem,1.4rem);
 }
 
 /* começando o hero */
@@ -216,10 +202,13 @@ main {
 	align-items: center;
 	background-color: #C2C8DA;
 	padding-top: 1%;
+	overflow: hidden;
+	max-width: 1400px;
 }
 #hero {
 	height: 70vh;
 	width: 90%;
+	max-width: 1200px;
 	background-image: url(../assets/backgroundHero.svg);
 	background-size: cover;
 	background-position: center;
@@ -231,126 +220,151 @@ main {
 	gap: 5%;
 }
 #contentImage {
-	width: 30%;
+	max-width: 250px;
+	width: 50%;
 	height: 50%;
+	min-width: 250px;
+	margin-left: 10%;
 }
 #hero img {
 	width: 100%;
 	height: 100%;
-	margin-left: 30%;
+	object-fit: 100% 100%;
+	object-position: center;
 }
 .marginItens {
-	margin-left: 13.5%;
+	margin-left: 10%;
 }
 /* banner */
 #faixaDeMarcas {
-	height: 15vh;
-	width: 90%;
+	width: 80vw;
 	background-color: #E6C744;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	padding: 2rem;
+	border-radius: 20px;
+	object-fit: cover;
+
 }
 #faixaDeMarcas img {
-	width: 90%;
-	height: 95%;
+	width: 100%;
+	height: auto;
 }
 /* aqui começa o arrivals */
 /* estou fazendo uma image replacemente para garantir acessibilidade e fidelidade ao design */
 #arrivals {
 	background-color: #fff;
 	border-radius: 20px 20px 0 0;
-	width: 90vw;
+	max-width: 90vw;
 	height: auto;
-	padding-bottom: 5%;
+	padding-bottom: 2rem;
 }
-/* image replacemente */
-#arrivals h2 span {
+  
+  /* Image replacement (acessibilidade visual) */
+  #arrivals h2 span {
 	display: block;
 	text-indent: -999999px;
 	width: 2%;
-}
-#arrivals h2 {
-	height: 10%;
+  }
+  
+  #arrivals h2 {
+	max-width: 20%;
+	min-width: 200px;
 	display: flex;
 	align-items: center;
-}
-#arrivals h2 img {
-	width: 20%;
-	margin-left: 2%;
-	margin-top: 2%;
-}
-/* conteudo do arrivals */
-.cardArrivals {
+	margin-left: 1rem;
+	margin-top: 1rem;
+  }
+  
+  #arrivals h2 img {
 	width: 100%;
-	height: 100%;
-	display: grid;
-	grid-template-columns: 3fr 1fr;
-	grid-template-rows: auto repeat(2, minmax(10px, 15px));
-	grid-template-areas: "imagem imagem" "titulo icon" "texto icon";
+	height: auto;
+  }
+  
+  /* Container que envolve os cards */
+  #arrivalsContent {
+	width: 90vw;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
-	justify-items: start;
-	gap: 10px 0;
-	transition: all 0.4s ease;
-	border: 1px solid transparent;
-}
-.cardArrivals h3 {
-	margin-top: 10px;
-	font-weight: bold;
-}
-.cardArrivals p {
-	font-weight: 300;
-	font-size: 0.8rem;
-}
-.cardArrivals .containerFoto img{
-	width: 100%;
-	height: 100%;
-	border-radius: 20%;
-}
-.cardArrivals img.icon {
-	width: 40%;
-}
-.containerFoto {
-	width: 300px;
-	height: 400px;
-	justify-self: center;
-	grid-area: imagem;
-}
-.icon {
-	grid-area: icon;
-	justify-self: end;
-	width: 70%;
-	height: 80%;
-}
-.cardArrivals h3 {
-	grid-area: titulo;
-}
-.cardArrivals p {
-	grid-area: texto;
-}
-#arrivalsContent a {
-	width: 30%;
-	height: 90%;
+	gap: 20px;
+	padding-top: 5%;
+  }
+  
+  /* O link que envolve cada card */
+  #arrivalsContent a {
+	max-width: 400px;
+	width: 30%; /* controla o tamanho dos cards */
+	min-width: 290px;
 	text-decoration: none;
 	color: #000;
-}
-/* animação do card */
-.cardArrivals:hover {
-	transform: translateY(-5px) scale(1.1);
-}
-
-#arrivalsContent {
-	display: flex;
-	justify-content: space-evenly;
+	display: block;
+  }
+  
+  /* Card em si */
+  .cardArrivals {
+	/* width: clapm(250px,100%,500px); */
+	max-width: 500px;
+	width: 100%;
+	min-width: 200px;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr repeat(2, minmax(0.5fr, 20px));
+	grid-template-areas:
+	  "imagem imagem"
+	  "titulo icon"
+	  "texto icon";
 	align-items: center;
-	flex-wrap: wrap;
+	justify-items: start;
+	gap: 0.5rem 0;
+	transition: all 0.4s ease;
+	border: 1px solid transparent;
+  }
+  
+  .cardArrivals:hover {
+	transform: translateY(-5px) scale(1);
+  }
+  
+  .cardArrivals h3 {
+	font-size: 1rem;
+	font-weight: bold;
+	grid-area: titulo;
+  }
+  
+  .cardArrivals p {
+	font-weight: 300;
+	font-size: 0.8rem;
+	grid-area: texto;
+  }
+  
+  /* Container fixo para imagem do card */
+  .containerFoto {
+	width: 100%;
+	height: 400px;
+	grid-area: imagem;
+	overflow: hidden;
+  }
+  
+  .containerFoto img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20%;
+  }
+  
+  /* Ícone */
+  .cardArrivals img.icon {
+	width: 40%;
+	min-width: 20px;
 	height: auto;
-	margin-top: 5%;
-	gap: 40px;
-	padding:  0 4%
-}
+	grid-area: icon;
+	justify-self: end;
+  }
+  
+
+  
 /* PayDay section */
 #payDay {
 	width: 90vw;
@@ -700,3 +714,167 @@ li.item a:hover {
 	color: #E6C744;
 	transition-duration: 0.5s;
 }
+#menu-btn {
+	display: none;
+}
+#btn-fechar {
+	display: none;
+}
+
+@media (max-width:950px) {
+	
+	/* menu responsivo */
+	#menu-btn {
+		display: flex;
+		gap: 10px;
+		text-transform: uppercase;
+		font-size: clamp(1rem, 5vw, 2rem);
+		font-weight: bold;
+		color: #fceb00;
+		background: none;
+		border: none;
+		align-items: center;
+	}
+	#hamburguer {
+		display: block;
+		width: 30px;
+		border-top: #ffd104 solid 5px;
+	}
+	#hamburguer::after, #hamburguer::before {
+		content: "";
+		display: block;
+		width: 30px;
+		border-top: #ffd104 solid 5px;
+		margin-top: 5px;
+	}
+	#nav {
+		width: 0;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-image: linear-gradient(45deg, #f1e64d, #f5e619, #f1e64d);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: all 1.5s ease-in-out;
+		overflow: hidden;
+		padding-top: 30px;
+	}
+	#nav.active #btn-fechar {
+		display: flex;
+		width: 100px;
+		height: 100px;
+		background: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+}
+	#x {
+		display: block;
+		width: 40px;
+		border-bottom: solid 5px #000;
+		transform: rotate(-45deg);
+		position: relative;
+	}
+	#x::before {
+		display: block;
+		content: "";
+		width: 40px;
+		border-bottom: solid 5px #000;
+		transform: rotate(90deg);
+		position: absolute;
+	}
+	
+	.menu-responsivo {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2%;
+		animation: demorarDesaparecer 0.5s ease 0.5s forwards;
+		justify-content: flex-start;
+	}
+	.menu-responsivo li {
+		padding: 2rem;
+		text-align: left;
+		border-bottom: 3px solid #000;
+		width: 100%;
+	}
+	.menu-responsivo a {
+		padding: 0 0 0 2rem;
+		font-size: 2rem;
+	}
+	.menu-responsivo a:hover {
+		transform: none;
+	 	font-size: clamp(2rem, 3vw, 2rem);
+		color: rgb(0, 0, 0);
+	}
+	#botaoLogin {
+		padding: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		margin-left: 0;
+	}
+	#botaoLogin a {
+		width: 100%;
+		font-size: clamp(1rem, 2vw, 2rem);
+		padding: 0;
+		height: 100%;
+	}
+	#botaoLogin:hover {
+		transform: none;
+		background-color: #000;
+	}
+	#botaoLogin a:hover {
+		color: #fff;
+	}
+	#nav.active {
+		width: 90dvw;
+		display: flex;
+		padding-top: 0;
+	}
+	/* animações utilizadas no menu */
+	@keyframes demorarAparecer {
+		  to {
+			opacity: 1;
+		  }
+	}
+	@keyframes demorarDesaparecer {
+		to {
+			opacity: 0;
+		}
+	}
+	#nav.active .menu-responsivo {
+		opacity: 0;
+		animation: demorarAparecer 1s ease-in-out 0.5s forwards; 
+	}
+
+}
+	/* fim do menu responsivos */
+	/* @keyframes backgroundAnimado {
+		0% {
+			background-position: 50%, 0;
+		}
+		50% {
+			background-position: 100%, 50%;
+		}
+		100% {
+			background-position: 50%, 0;
+		}
+		}
+	}
+
+	main {
+		padding: 0;
+	}
+	#hero {
+		width: 100%;
+		height: 50dvh;
+		border-radius: 0;
+		background-size: 300% 300%;
+		background: -webkit-linear-gradient(40deg, #4e4c3c,#e0c724,#fff200);       
+		padding: 0;                            
+	} */
+
+/* fazendo ajustes no site para ficar estético */
