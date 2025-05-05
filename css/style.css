@@ -57,12 +57,15 @@ iframe {
 	font: inherit;
 	vertical-align: baseline;
 }
-
+body,html {
+	overflow-x: hidden;
+}
 body {
 	font: 1rem  'Poppins';
 	color: #333;
 	line-height: 100%;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
+	/* width: 100%; */
 }
 ol, ul {
 	list-style: none;
@@ -837,7 +840,6 @@ li.item a:hover {
 		color: #fff;
 	}
 	#nav.active {
-		
 		width: 450px;
 		display: flex;
 		padding-top: 0;
@@ -869,6 +871,7 @@ li.item a:hover {
 		top: 0;
 		background-color: #fff;
 		z-index: 999999;
+		width: 100%;
 	}
 	/* aqui começa o hero */
 	#hero {
@@ -929,7 +932,7 @@ li.item a:hover {
 			width: 100%;
 			border-radius: 0;
 			display: flex;
-			height: 80dvh;
+			height: 100dvh;
 			flex-direction: column;
 			gap: 50px;
 			padding: 0;
@@ -951,7 +954,10 @@ li.item a:hover {
 			padding-right: 50px;
 		}
 		.cardArrivals  .containerFoto img {
-			height: 300px;
+			height: 500px;
+		}
+		.arrivalsContent a  .cardArrivals{
+			max-height: 250px;
 		}
 		/*Começando a seção PayDay  */
 		#payDay {
@@ -966,6 +972,10 @@ li.item a:hover {
 	#PaydaySection #imagePayDaySection {
 		max-width: 400px;
 		margin-left: 1.5rem;
+	}
+	.textcontentPayday {
+		margin-left: 0;
+		padding-left: 5px;
 	}
 	.textcontentPayday #botaoDoPayDaySection {
 		width: 200px;
@@ -1042,44 +1052,65 @@ li.item a:hover {
 	}
 	/* começando o footer */
 	#footer {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 30dvh 1fr;
-		height: 60dvh;
-		justify-items: center;
+		max-width: 100%;
+		grid-template-columns: 100%;
+		grid-template-rows: 1fr 1fr 1fr 30dvh;
+		height: auto;
+		justify-items:  flex-start;
 		background-color: #000000;
-		align-items: baseline;
+		align-items: center;
 		padding-top: 5%;
-		column-gap: 20px;
+		gap: 20px;
+		overflow: hidden;
 	}
 	.socialContent {
+		width: 100dvw;
 		height: 100%;
 		grid-column: 1/4;
-		grid-row: 2/3;
+		grid-row: 4/5;
 		margin: 0;
 		padding-left: 60px;
 		gap: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	.socialContent h6 {
-		width: 100%;
+		width: auto;
 		font-size: 3rem;
 	}
 	.socialContent p {
 		margin: 0;
 		padding: 0;
-		width: 100%;
+		width: auto;
 		font-size:1rem;
 	}
 	.socialContent .icon {
 		padding: 0;
+		width: auto;
 	}
 	.socialContent a {
 		width: 42px;
 		height: 42px;
 	}
 	ul.lista {
+		width: auto;
 		height: auto;
 		justify-content: center;
+		padding-left: 10px;
 		
+	}
+	ul.lista li a {
+		font-size: 20px;
+	}
+	#company {
+		grid-row: 1/2;
+	}
+	#quikLink {
+		grid-row: 2/3;
+	}
+	#legal {
+		grid-row: 3/4;
 	}
 
 }	
