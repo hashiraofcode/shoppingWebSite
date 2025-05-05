@@ -932,7 +932,7 @@ li.item a:hover {
 			width: 100%;
 			border-radius: 0;
 			display: flex;
-			height: 90dvh;
+			height: auto;
 			flex-direction: column;
 			/* gap: 20px; */
 			padding: 0;
@@ -953,7 +953,7 @@ li.item a:hover {
 			flex-wrap: nowrap;
 			justify-content: space-between;
 			padding-right: 50px;
-			height: 90%;
+			height: auto;
 		}
 		.cardArrivals  .containerFoto img {
 			height: 500px;
@@ -1104,6 +1104,9 @@ li.item a:hover {
 	}
 	ul.lista li a {
 		font-size: 20px;
+	}
+	ul.lista li {
+		font-size: 25px;
 	}
 	#company {
 		grid-row: 1/2;
