@@ -151,7 +151,7 @@ nav > ul li a {
 
 nav > ul li a:hover {
 	 color: #E6C744;
-	 font-size: calc(1.5rem + 20%);
+	 font-size: calc(1.5% + 20%);
 	 transition-duration: 0.3s;
 }
 /* botão */
@@ -949,6 +949,9 @@ li.item a:hover {
 			flex-wrap: nowrap;
 			justify-content: space-between;
 			padding-right: 50px;
+		}
+		a .cardArrivals {
+			height: 200px;
 		}
 		/*Começando a seção PayDay  */
 		#payDay {
