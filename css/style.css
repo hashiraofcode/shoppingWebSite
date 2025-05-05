@@ -110,7 +110,7 @@ h1 {
 	align-items: center;
 }
 header {
-	max-width: 100dvw;;
+	max-width: 100dvw;
 	height: 15vh;
 	display: flex;
 	align-items: center;
@@ -154,7 +154,7 @@ nav > ul li a {
 
 nav > ul li a:hover {
 	 color: #E6C744;
-	 font-size: calc(1.5% + 20%);
+	 font-size: calc(1.5rem + 20%);
 	 transition-duration: 0.3s;
 }
 /* botão */
@@ -932,7 +932,7 @@ li.item a:hover {
 			width: 100%;
 			border-radius: 0;
 			display: flex;
-			height: 80dvh;
+			height: 90dvh;
 			flex-direction: column;
 			/* gap: 20px; */
 			padding: 0;
