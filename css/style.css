@@ -950,8 +950,8 @@ li.item a:hover {
 			justify-content: space-between;
 			padding-right: 50px;
 		}
-		a .cardArrivals {
-			height: 200px;
+		.cardArrivals  .containerFoto img {
+			height: 300px;
 		}
 		/*Começando a seção PayDay  */
 		#payDay {
